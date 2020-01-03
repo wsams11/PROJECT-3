@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 
 const VideoItem = ({ video, onVideoSelect }) => {
   const imgUrl = video.snippet.thumbnails.default.url;

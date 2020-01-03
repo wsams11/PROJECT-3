@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import YTSearch from 'youtube-api-search';
-import _ from 'lodash';
+import React, { Component } from './node_modules/react';
+import YTSearch from './node_modules/youtube-api-search';
+import _ from './node_modules/lodash';
 import SearchBar from './components/searchBar';
 import VideoList from './components/videoList';
 import VideoPlayer from './components/videoPlayer'
