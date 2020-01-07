@@ -109,10 +109,10 @@ Submit
         <p>App Created by Jacob Lara, Richard Klevan, William Sams III</p>
       </div>
     </footer>
-  </div>
 
 
-  )
+
+  
 
 
 export default Login;
