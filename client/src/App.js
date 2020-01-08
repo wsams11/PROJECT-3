@@ -4,7 +4,7 @@ import _ from 'lodash';
 import SearchBar from './components/searchBar';
 import VideoList from './components/videoList';
 import VideoPlayer from './components/videoPlayer'
-import NavBar from './components/navBar'
+import NavBar from '../components/navBar'
 
 const YT_API = 'AIzaSyBjig4d5vLFZSGZIgL0T2CktcYI5izgPgY';
 

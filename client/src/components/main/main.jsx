@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const main = (props) => {
+const Main = (props) => {
   return (
     <body class="text-center">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -25,7 +25,7 @@ const main = (props) => {
     
       <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>App Created by Jacob Lara, Richard Klevan, William Sams III</p>
+          <p>App Created by Jacob Lara, Richard K, William Sams III</p>
         </div>
       </footer>
     </div>
@@ -33,4 +33,4 @@ const main = (props) => {
   );
 }
 
-export default NavBar;
+export default Main;
