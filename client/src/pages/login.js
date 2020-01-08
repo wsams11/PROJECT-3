@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
+import NavBar from '../components/navBar'
 import axios from "axios";
 import "./App.css"
 import {Jumbotron, Table, Form, Button, Col, Row, DropdownButton, Dropdown} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import image from './images/image.jpeg';
+
+
 const Login = () => {
 
 
