@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const main = (props) => {
+const Main = (props) => {
   return (
     <body class="text-center">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -33,4 +33,4 @@ const main = (props) => {
   );
 }
 
-export default NavBar;
+export default Main;
