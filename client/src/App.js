@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
+import NYT from './util/NYTAPI';
 import SearchBar from './components/searchBar';
 import VideoList from './components/videoList';
 import VideoPlayer from './components/videoPlayer'
@@ -34,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar siteTitle='React Youtube App' />
+        <NavBar siteTitle='Topic Page' />
         <div className="container">
           <SearchBar
             onChange={(searchTerm) => {this.videoSearch(searchTerm)}} />
