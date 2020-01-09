@@ -13,12 +13,12 @@ router.get("/info", requireAuth, function (req, res) {
 router.post("/signin", requireSignin, function (req, res) {
   console.log("sign-in route hit")
   console.log(req.body);
-  res.json({ token: tokenizer(req.user), email: req.user.email });
+  res.json({ token: tokenizer(req.user), email: req.user.email, topics: req.user.topics});
 });
 
 router.post("/signup", function (req, res) {
   console.log("sign up route hit");
-  const { email, password } = req.body;
+  const { email, password, topics } = req.body;
   console.log(req.body);
 
   if (!email || !password) {
@@ -39,11 +39,11 @@ router.post("/signup", function (req, res) {
         return res.status(422).send({ error: "Email already in use" });
       }
       //create new user object
-      const user = new db.User({ email, password });
+      const user = new db.User({ email, password, topics });
       // save the user
       user.save().then(user => {
         // respond with the success if the user existed
-        res.json({ token: tokenizer(user), user: { email: user.email } });
+        res.json({ token: tokenizer(user), user: { email: user.email , topics: user.topics} });
       });
     })
     .catch(err => {
