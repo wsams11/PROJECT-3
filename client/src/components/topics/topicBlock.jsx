@@ -2,8 +2,10 @@ import React from "react";
 import "./topic.css";
 
 
-function topicBlock(props){
-    return  (<div className="col-xs-12 col-sm-6 col-md-4">
+function TopicBlock(props){
+    return  ( 
+    
+    <div className="col-xs-12 col-sm-6 col-md-4">
     <div className="image-flip" ontouchstart="this.classList.toggle('hover');">
         <div className="mainflip">
             <div className="frontside">
