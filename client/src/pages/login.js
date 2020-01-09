@@ -8,14 +8,14 @@ import { Jumbotron, Container, Form, Button, Col, Row, DropdownButton, Dropdown 
 import "./login.css"
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-
+const topicsArray = ["Taxes", "Finances", "Renting an Apartment", "Buying a Home", "Saving and Investing", "Buying a Car", "Career Advice", "Investing", "Insurance"];
 
 const Login = (props) => {
 
   const [user, setUser] = useState({
     email: "",
     password: "",
-    topics: []
+    topics: ""
   })
 
   const handleChange = e => {
@@ -23,6 +23,13 @@ const Login = (props) => {
     setUser({
       ...user,
       [name]: value
+    });
+  }
+
+  const setTopic = topic => {
+    setUser({
+      ...user,
+      topics: topic
     });
   }
 
@@ -51,7 +58,8 @@ const Login = (props) => {
           //   topics: "",
           //   redirectTo: ""
           // })
-          props.history.push("/home");
+          // props.history.push("/home");
+          response.redirect("/home")
         }
       })
       .catch(error => {
@@ -92,7 +100,7 @@ const Login = (props) => {
       })
   };
 
-  console.log(user);
+
 
   return (
 
@@ -143,7 +151,7 @@ const Login = (props) => {
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control onChange={handleChange} name="password" value={user.password} type="password" placeholder="Password" />
               </Form.Group>
 
 
@@ -152,21 +160,20 @@ const Login = (props) => {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
 
-              <DropdownButton id="dropdownBtn" title="Select Topics">
-                <Dropdown.Item href="#/action-1">Taxes</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Finances</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Renting an Apartment</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Buying a Home</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Saving/Investing</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Buying a Car</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Career Advice</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Interviewing </Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Insurance</Dropdown.Item>
+              <DropdownButton id="dropdownBtn" title={user.topic || "Select Topics"}>
 
-
-
+                {topicsArray.map(topic => <Dropdown.Item onClick={() => setTopic(topic)}>{topic}</Dropdown.Item>)}
+                {/* <Dropdown.Item>Taxes</Dropdown.Item>
+                <Dropdown.Item>Finances</Dropdown.Item>
+                <Dropdown.Item>Renting an Apartment</Dropdown.Item>
+                <Dropdown.Item>Buying a Home</Dropdown.Item>
+                <Dropdown.Item >Saving/Investing</Dropdown.Item>
+                <Dropdown.Item >Buying a Car</Dropdown.Item>
+                <Dropdown.Item >Career Advice</Dropdown.Item>
+                <Dropdown.Item >Interviewing </Dropdown.Item>
+                <Dropdown.Item >Insurance</Dropdown.Item> */}
               </DropdownButton>
-              <Button className="submitBtn" type="submit">
+              <Button className="submitBtn" onClick={handleSignupSubmit} type="submit">
                 Submit
               </Button>
             </Form>
