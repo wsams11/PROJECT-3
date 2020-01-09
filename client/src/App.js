@@ -7,7 +7,6 @@ import Login from "./pages/login";
 // import Nav from "./components/Nav";
 =======
 import Home from "./pages/Home";
-// import Home2 from "./pages/Home2";
 import Topics from "./pages/topics";
 // import Login from "./components/Login";
 
@@ -16,6 +15,7 @@ import Topics from "./pages/topics";
 function App() {
   return (
     <Router>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div>
         {/* <Nav /> */}
@@ -28,14 +28,20 @@ function App() {
       </div>
 =======
       {/* <div> */}
+=======
+>>>>>>> 0f797f949c9d17998a2b3964b8272e98506e651c
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/topics" component={Topics} />
           {/* <Route exact path="/Login" component={Login} /> */}
           {/* <Route component={NoMatch} /> */}
         </Switch>
+<<<<<<< HEAD
       {/* </div> */}
 >>>>>>> 8435bd9dfe614787f923f03d8445e9dd559221d5
+=======
+    
+>>>>>>> 0f797f949c9d17998a2b3964b8272e98506e651c
     </Router>
   );
 }
