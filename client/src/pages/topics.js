@@ -8,6 +8,12 @@ class Topics extends Component {
     topics
   };
 
+  handleBlockClick = (title,id) => {
+    console.log("This block clicked: " + title + " " + id);
+
+
+  };
+
   render() {
     return (
       <div >
@@ -28,6 +34,7 @@ class Topics extends Component {
             <div class="row">
         {this.state.topics.map(topics => (
           <TopicBlock
+          handleBlockClick={this.handleBlockClick}
           id={topics.id}
           title={topics.title}
           image={topics.image}
