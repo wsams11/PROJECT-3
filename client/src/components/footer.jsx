@@ -1,7 +1,7 @@
 import React from 'react';
-import "./style.css";
+// import "./style.css";
 
-const footer = (props) => {
+const Footer = (props) => {
   return (
     <footer class="mastfoot mt-auto">
         <div class="inner">
@@ -11,4 +11,4 @@ const footer = (props) => {
   );
 }
 
-export default footer;
+export default Footer;
