@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from "../components/navBar";
 import axios from "axios";
-import Footer from '../components/footer'
-import { Jumbotron, Container, Form, Button, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
+// import Footer from '../components/footer'
+import { Container, Form, Button, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
 
-import "./login.css"
+import "../components/main/cover.css"
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -97,16 +97,24 @@ const Login = (props) => {
   return (
 
     <Container>
-      <NavBar />
+      <header className="masthead mb-auto">
+        <div className="inner">
+          <nav className="nav nav-masthead justify-content-center">
+            <a className="nav-link" href="/">Home</a>
+            <a className="nav-link" href="/topics">Topics</a>
+            <a className="nav-link active" href="/login">Login / Sign Up</a>
+          </nav>
+        </div>
+      </header>
       <main role="main" className="inner cover">
-        <h1 className="cover-heading">TRANSITIONS</h1>
-        <Row>
+        {/* <h1 className="cover-heading">TRANSITIONS</h1> */}
+        <Row className="loginRow">
 
           <Col xs={12} md={6} lg={5} className="LoginContainer">
 
             <h1> Login</h1>
 
-            <Form classNanme="Form">
+            <Form className="Form">
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -132,7 +140,7 @@ const Login = (props) => {
           <Col xs={12} md={6} lg={5} className="SignupContainer">
 
             <h1> Signup</h1>
-            <Form classNanme="Form">
+            <Form className="Form">
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control onChange={handleChange} value={user.email} name="email" type="email" placeholder="Enter email" />
@@ -176,7 +184,7 @@ const Login = (props) => {
 
       </main>
 
-      <Footer />
+     
     </Container>
 
   )
