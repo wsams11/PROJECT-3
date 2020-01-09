@@ -1,14 +1,14 @@
 import React from 'react';
-import "./style.css";
+// import "./style.css";
 
-const footer = (props) => {
+const Footer = (props) => {
   return (
     <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>App Created by Jacob Lara, Richard K, William Sams III</p>
+          <p>App Created by Jacob Lara, Richard Klevan, William Sams III</p>
         </div>
       </footer>
   );
 }
 
-export default footer;
+export default Footer;

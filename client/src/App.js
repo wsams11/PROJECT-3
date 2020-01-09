@@ -1,53 +1,24 @@
-import React, { Component } from 'react';
-import YTSearch from 'youtube-api-search';
-import _ from 'lodash';
-import SearchBar from './components/searchBar';
-import VideoList from './components/videoList';
-import VideoPlayer from './components/videoPlayer'
-import NavBar from '../components/navBar'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./pages/login";
+// import Detail from "./pages/Detail";
+// import NoMatch from "./pages/NoMatch";
+// import Nav from "./components/Nav";
 
-const YT_API = 'AIzaSyBjig4d5vLFZSGZIgL0T2CktcYI5izgPgY';
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      videos: [],
-      selectedVideo: null
-    };
-
-    this.searchYoutube('');
-  }
-
-  videoSearch = _.debounce((term) => { this.searchYoutube(term) }, 300);
-
-  searchYoutube(term) {
-    YTSearch({ key: YT_API, term: term}, (videos) => {
-      this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      });
-    });
-  }
-
-  render() {
-    return (
+function App() {
+  return (
+    <Router>
       <div>
-        <NavBar siteTitle='React Youtube App' />
-        <div className="container">
-          <SearchBar
-            onChange={(searchTerm) => {this.videoSearch(searchTerm)}} />
-          <VideoPlayer video={this.state.selectedVideo} />
-          <VideoList
-            onVideoSelect={(selectedVideo) => {this.setState({selectedVideo})}}
-            videos={this.state.videos}
-            />
-        </div>
+        {/* <Nav /> */}
+        <Switch>
+          <Route exact path="/" component={Login} />
+          {/* <Route exact path="/books" component={Books} /> */}
+          {/* <Route exact path="/books/:id" component={Detail} /> */}
+          {/* <Route component={NoMatch} /> */}
+        </Switch>
       </div>
-    );
-  }
-
+    </Router>
+  );
 }
 
 export default App;
