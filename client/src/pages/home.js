@@ -6,14 +6,14 @@ function Home() {
   return (
    
       
+    
     <div className="cover-container d-flex mx-auto h-100 flex-column text-center">
-      
       <header className="masthead mb-auto">
         <div className="inner">
           <nav className="nav nav-masthead justify-content-center">
             <a className="nav-link active" href="/">Home</a>
             <a className="nav-link" href="/topics">Topics</a>
-            <a className="nav-link" href="#">Login / Sign Up</a>
+            <a className="nav-link" href="/login">Login / Sign Up</a>
           </nav>
         </div>
       </header>
@@ -25,7 +25,7 @@ function Home() {
           The helpful guide to becoming an effective adult.{" "}
         </p>
         <p className="lead">
-          <a href="#" className="btn btn-lg btn-secondary">
+          <a href="/login" className="btn btn-lg btn-secondary">
             Sign Up!
           </a>
         </p>
