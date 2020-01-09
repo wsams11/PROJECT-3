@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import NavBar from "./components/navBar";
-import TopicBlock from "./components/topics/topicBlock";
-import Footer from "./components/footer";
-import topics from "./topics.json";
+import TopicBlock from "../components/topics/topicBlock";
+import topics from "../topics.json";
 
 class Topics extends Component {
   // Setting this.state.topics to the topics json array
@@ -12,21 +10,36 @@ class Topics extends Component {
 
   render() {
     return (
-      <div>
-        <NavBar />
-        <Title>Topics</Title>
+      <div >
+      
+      <header className="masthead mb-auto">
+        <div className="inner">
+          <nav className="nav nav-masthead justify-content-center">
+            <a className="nav-link active" href="/">Home</a>
+            <a className="nav-link" href="/topics">Topics</a>
+            <a className="nav-link" href="#">Login / Sign Up</a>
+          </nav>
+        </div>
+      </header>
+      
+      <section id="team" class="pb-5">
+        <div class="container">
+            <h1 class="section-title h1">TOPICS</h1>
+            <div class="row">
         {this.state.topics.map(topics => (
           <TopicBlock
-            id={topics.id}
-            title={topics.title}
-            image={topics.image}
-            frontText={topics.frontText}
-            backText={topics.backText}
+          id={topics.id}
+          title={topics.title}
+          image={topics.image}
+          frontText={topics.frontText}
+          backText={topics.backText}
           />
-        ))}
-        <Footer />
+          ))}
       </div>
-    );
+      </div>
+        </section>
+          </div>
+    )
   }
 }
 

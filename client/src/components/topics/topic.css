@@ -1,11 +1,21 @@
-/* FontAwesome for working BootSnippet :> */
-
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #a9a9a9;
+    background: #eee !important;
 }
 
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
 
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
 
 section {
     padding: 60px 0;
@@ -13,14 +23,14 @@ section {
 
 section .section-title {
     text-align: center;
-    color: black;
+    color: #007b5e;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 
 #team .card {
     border: none;
-    background: black;
+    background: #ffffff;
 }
 
 .image-flip:hover .backside,
@@ -66,7 +76,7 @@ section .section-title {
     position: absolute;
     top: 0;
     left: 0;
-    background: black;
+    background: white;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -102,12 +112,12 @@ section .section-title {
 
 .backside .card a {
     font-size: 18px;
-    color: White !important;
+    color: #007b5e !important;
 }
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: White !important;
+    color: #007b5e !important;
 }
 
 .frontside .card .card-body img {
@@ -115,6 +125,8 @@ section .section-title {
     height: 120px;
     border-radius: 50%;
 }
-.card-text{
-    color: white;
+p{
+    color: black;
+}.nav-masthead .nav-link{
+    color: rgba(0, 0, 0, 0.5);
 }
