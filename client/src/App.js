@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
-import NYT from './util/NYTAPI';
+import Articles from './components/article';
 import SearchBar from './components/searchBar';
 import VideoList from './components/videoList';
 import VideoPlayer from './components/videoPlayer'
@@ -44,6 +44,7 @@ class App extends Component {
             onVideoSelect={(selectedVideo) => {this.setState({selectedVideo})}}
             videos={this.state.videos}
             />
+            <Articles/>
         </div>
       </div>
     );
