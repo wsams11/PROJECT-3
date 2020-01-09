@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.28895b95.chunk.css",
+    "main.js": "/static/js/main.cce2474c.chunk.js",
+    "main.js.map": "/static/js/main.cce2474c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.084b20ab.js",
+    "runtime-main.js.map": "/static/js/runtime-main.084b20ab.js.map",
+    "static/css/2.64a99b10.chunk.css": "/static/css/2.64a99b10.chunk.css",
+    "static/js/2.f76a2e73.chunk.js": "/static/js/2.f76a2e73.chunk.js",
+    "static/js/2.f76a2e73.chunk.js.map": "/static/js/2.f76a2e73.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.05f5474a316b85b6f4d73f3cb163fb45.js": "/precache-manifest.05f5474a316b85b6f4d73f3cb163fb45.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.64a99b10.chunk.css.map": "/static/css/2.64a99b10.chunk.css.map",
+    "static/css/main.28895b95.chunk.css.map": "/static/css/main.28895b95.chunk.css.map",
+    "static/js/2.f76a2e73.chunk.js.LICENSE": "/static/js/2.f76a2e73.chunk.js.LICENSE",
+    "static/media/cover.css": "/static/media/peopleonhill.da305d60.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.084b20ab.js",
+    "static/css/2.64a99b10.chunk.css",
+    "static/js/2.f76a2e73.chunk.js",
+    "static/css/main.28895b95.chunk.css",
+    "static/js/main.cce2474c.chunk.js"
+  ]
+}
