@@ -1,8 +1,10 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-/* #team {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(peopleonhill.jpeg);
-} */
+#team {
+    background-color: black;
+    -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -129,5 +131,6 @@ section .section-title {
 p{
     color: black;
 }.nav-masthead .nav-link{
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
+

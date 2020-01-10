@@ -160,3 +160,9 @@ p {
     padding-top: 150px;
     padding-bottom: 100px;
   }
+  #team {
+    background-color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
