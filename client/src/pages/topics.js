@@ -1,19 +1,42 @@
 import React, { Component } from "react";
 import TopicBlock from "../components/topics/topicBlock";
+import YTSearch from "youtube-api-search";
+import _ from "lodash";
+import VideoList from "../components/videoList";
+import VideoPlayer from "../components/videoPlayer";
 import topics from "../topics.json";
+
+const YT_API = "AIzaSyBjig4d5vLFZSGZIgL0T2CktcYI5izgPgY";
 
 class Topics extends Component {
   // Setting this.state.topics to the topics json array
   state = {
-    topics
+    topics,
+    videos: [],
+    selectedVideo: null
   };
 
+  
+  videoSearch = _.debounce(term => {
+    this.searchYoutube(term);
+  }, 300);
+  
+  searchYoutube = term => {
+    YTSearch({ key: YT_API, term: term }, videos => {
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      });
+    });
+  };
+  
+  
   handleBlockClick = (title,id) => {
     console.log("This block clicked: " + title + " " + id);
+    this.searchYoutube(title);
 
 
   };
-
   render() {
     return (
       <div >
@@ -45,7 +68,19 @@ class Topics extends Component {
       </div>
       </div>
         </section>
+          
+          
+          <div className="container">
+            
+            <VideoPlayer video={this.state.selectedVideo} />
+            <VideoList
+              onVideoSelect={selectedVideo => {
+                this.setState({ selectedVideo });
+              }}
+              videos={this.state.videos}
+            />
           </div>
+        </div>
     )
   }
 }
