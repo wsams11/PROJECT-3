@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import NavBar from "../components/navBar";
-import axios from "axios";
+// import axios from "axios";
 import Footer from '../components/footer'
-import { Jumbotron, Container, Form, Button, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
+import { Container, Form, Button, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
 import UserContext from "../userContext.js";
 // import {setUser, user} from "../App.js"
 
