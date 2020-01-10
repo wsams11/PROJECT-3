@@ -24,14 +24,6 @@ export default class Article extends React.Component {
       });
   }
 
-  // componentDidMount() {
-  //   this.renderArticles(this.props.params.topic);
-  //   console.log(this.props.params.topic);
-  // };
-  // componentWillReceiveProps(nextProps) {
-  //   this.renderArticles(nextProps.params.topic);
-  // }
-
   render() {
     return (
       <ArticlesRender articles={this.state.articles} />
