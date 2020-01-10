@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import UserContext from "./userContext.js";
@@ -113,9 +114,17 @@ function App(props) {
       })
   };
 
+=======
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/home";
+import Topics from "./pages/topics";
+// import Login from "./pages/login";
+>>>>>>> ab409bbcb7df3233d67d6fb8bd341f9a3c786095
 
 
   return (
+<<<<<<< HEAD
 
     <UserContext.Provider value={{ user }}>
       <Switch>
@@ -131,6 +140,17 @@ function App(props) {
       </Switch>
     </UserContext.Provider>
 
+=======
+    <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/topics" component={Topics} />
+          {/* <Route exact path="/login" component={Login} /> */}
+          {/* <Route component={NoMatch} /> */}
+        </Switch>
+        
+    </Router>
+>>>>>>> ab409bbcb7df3233d67d6fb8bd341f9a3c786095
   );
 }
 

@@ -1,22 +1,60 @@
 import React, { Component } from "react";
 import TopicBlock from "../components/topics/topicBlock";
+import YTSearch from "youtube-api-search";
+import _ from "lodash";
+import VideoList from "../components/videoList";
+import VideoPlayer from "../components/videoPlayer";
 import topics from "../topics.json";
+import axios from "axios";
+import ArticlesRender from '../components/articleRender';
+
+const YT_API = "AIzaSyBjig4d5vLFZSGZIgL0T2CktcYI5izgPgY";
 
 class Topics extends Component {
   // Setting this.state.topics to the topics json array
   state = {
-    topics
+    topics,
+    videos: [],
+    selectedVideo: null,
+    articles: [],
   };
 
-  handleBlockClick = (title,id) => {
-    console.log("This block clicked: " + title + " " + id);
+  videoSearch = _.debounce(term => {
+    this.searchYoutube(term);
+  }, 300);
+  
+  searchYoutube = term => {
+    YTSearch({ key: YT_API, term: term }, videos => {
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      });
+    });
+  };
+  renderArticles(title) {
+
+    const KEY = "18a8835c27f54f6b9779354605f40a30";
+    let url = `https://newsapi.org/v2/everything?q=${title}&sortBy=relevancy&pageSize=5&apiKey=${KEY}`;
+
+    axios.get(url)
+      .then((result) => {
+        this.setState({
+          articles: result.data.articles
+        });
+      });
+  }
+  
+  
+  handleBlockClick = (searchTitle,id) => {
+    console.log("This block clicked: " + searchTitle + " " + id);
+    this.searchYoutube(searchTitle);
+    this.renderArticles(searchTitle);
 
 
   };
-
   render() {
     return (
-      <div >
+      <div>
       
       <header className="masthead mb-auto">
         <div className="inner">
@@ -28,12 +66,13 @@ class Topics extends Component {
         </div>
       </header>
       
-      <section id="team" class="pb-5">
-        <div class="container">
-            <h1 class="section-title h1">TOPICS</h1>
-            <div class="row">
+      <section id="team" className="pb-5">
+        <div className="container">
+            <h1 className="section-title h1">TOPICS</h1>
+            <div className="row">
         {this.state.topics.map(topics => (
           <TopicBlock
+          key={topics.id}
           handleBlockClick={this.handleBlockClick}
           id={topics.id}
           title={topics.title}
@@ -45,7 +84,32 @@ class Topics extends Component {
       </div>
       </div>
         </section>
+          
+          
+        <section id="team" className="pb-5">
+        <div className="container">
+            <h1 className="section-title h1">VIDEOS</h1>
+            <div className="row">
+            {/* <VideoPlayer video={this.state.selectedVideo} /> */}
+            {/* <VideoList
+              onVideoSelect={selectedVideo => {
+                this.setState({ selectedVideo });
+              }}
+              videos={this.state.videos}
+            /> */}
           </div>
+        </div>
+        </section>
+        <section id="team" className="pb-5">
+        <div className="container">
+            <h1 className="section-title h1">Articles</h1>
+            <div className="row">
+            <ArticlesRender articles={this.state.articles} />
+            
+          </div>
+        </div>
+        </section>
+        </div>
     )
   }
 }

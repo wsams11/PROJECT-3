@@ -6,7 +6,7 @@ function TopicBlock(props){
     return  ( 
     
     <div  onClick = {() => props.handleBlockClick(props.title,props.id)} className="col-xs-12 col-sm-6 col-md-4">
-    <div className="image-flip" ontouchstart="this.classList.toggle('hover');">
+    <div className="image-flip" onTouchStart="this.classList.toggle('hover');">
         <div className="mainflip">
             <div className="frontside">
                 <div className="card">

@@ -2,6 +2,7 @@
     {
       "id": 1,
       "title": "Taxes",
+      "searchTitle": "Taxes",
       "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1612&q=80",
       "frontText": "They really aren't THAT scary!",
       "backText": "Don't let the fear of doing your own taxes overwhelm you! Learn the ins and outs of what you need to be a Tax Expert!"
@@ -9,6 +10,7 @@
     {
       "id": 2,
       "title": "Finance",
+      "searchTitle": "Finance",
       "image": "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1595&q=80",
       "frontText": "Importance of Credit Score",
       "backText": "Do you know what your credit score is? Do you know how to check what your score is? Do you know how to increase your score? Are you familiar with how to remove something from credit history? If you answered no to any of these, no worries we got your back!"
@@ -16,6 +18,7 @@
     {
       "id": 3,
       "title": "Renting an Apartment",
+      "searchTitle": "Apartment Renting",
       "image": "https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
       "frontText": "Ready for the big bad world?",
       "backText": "What is a rental agreement? What happens when I have a roommate? Can I have a pet? Review resources that will be able to help answer apartment questions you didn't know you had."
@@ -23,13 +26,15 @@
     {
       "id": 4,
       "title": "Buying First Home",
+      "searchTitle": "First Home Buyer",
       "image": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
       "frontText": "Ready for the American Dream?",
       "backText": "Get help understanding the many different options that come along with purchasing a home. There are PLENTY of helpful resources and guides to making buying your First Home a piece of cake!"
     },
     {
       "id": 5,
-      "title": "Saving / Investing",
+      "title": "Investing",
+      "searchTitle": "Investing Tips",
       "image": "https://images.unsplash.com/photo-1517424788495-0d03ec42e244?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "frontText": "Lets be honest, you have no idea.",
       "backText": "There are alot of questions that you need answered. When should you save compared to when should you invest is probably the first question. View the resources to make an educated decision!"
@@ -37,6 +42,7 @@
     {
       "id": 6,
       "title": "Buying / Leasing Cars",
+      "searchTitle": "Buying and Leasing Cars",
       "image": "https://images.unsplash.com/photo-1565376901308-37344a4b06ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80",
       "frontText": "Getting the vheicle you've always wanted",
       "backText": "Do you know the difference between buying and leasing a car? Understanding the difference and knowing what you fits your lifestyle is the key to life!"
@@ -44,6 +50,7 @@
     {
       "id": 7,
       "title": "Possible Career Paths",
+      "searchTitle": "Possible Career Paths",
       "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1612&q=80",
       "frontText": "What do you really want to do?",
       "backText": "I know you don't have the answer to that question. Come learn about yourself and what career paths would best for you!"
@@ -51,13 +58,15 @@
     {
       "id": 8,
       "title": "Interview Tips",
+      "searchTitle": "Interview Tips",
       "image": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
       "frontText": "Stay ready so you don't have to get ready",
       "backText": "You don't want to walk into your big interview unprepared. Learn about what the interview enviorment is about. Get practice on interviews. What to have ready when you go to the interview.!"
     },
     {
       "id": 9,
-      "title": "Taxes",
+      "title": "Insurance",
+      "searchTitle": "Life Insurance Tips",
       "image": "https://images.unsplash.com/photo-1559019727-963e0a4eab74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "frontText": "Health Care, Property, Life",
       "backText": "You have heard your parents or grandparents talking about insurance, but what is it? Why are there so many different types of insurance. Understanding the different typs and what you need for your life to prepare yourself for any situation!"
