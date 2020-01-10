@@ -4,10 +4,11 @@
 import React, { useState } from 'react';
 import UserContext from "./userContext.js";
 import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import Topics from "./pages/topics";
 import Login from "./pages/login";
 import axios from "axios";
+// import { Router } from 'express';
 
 
 
@@ -118,6 +119,8 @@ function App(props) {
 
 
   return (
+    <Router>
+
 
     <UserContext.Provider value={{ user }}>
       <Switch>
@@ -132,6 +135,7 @@ function App(props) {
         {/* <Route component={NoMatch} /> */}
       </Switch>
     </UserContext.Provider>
+          </Router>
 
   );
 }
