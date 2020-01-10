@@ -15,3 +15,7 @@
   .text-cover{
     background-image: linear-gradient(rgba(156, 23, 23, 0.9),rgba(0,0,0,0.9)),url(groupphoto.jpeg);
   }
+
+  p{
+    color: white;
+  }
