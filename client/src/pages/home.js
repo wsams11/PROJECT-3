@@ -2,6 +2,7 @@ import React from "react";
 import "../components/main/cover.css";
 
 
+
 function Home() {
   return (
    
