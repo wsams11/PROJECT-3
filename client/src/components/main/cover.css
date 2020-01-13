@@ -136,7 +136,11 @@ p {
   margin-right : auto;
   width: 500px;
   
+    padding: 100px;
+
+  
   }
+ 
   
   .submitBtn {
   background-color: rgb(125, 103, 125) !important;
@@ -154,8 +158,9 @@ p {
   .SignupContainer {
       float: right;
       width: 500px;
-      
+      padding: 100px;
       }
+
   .loginRow{
     padding-top: 150px;
     padding-bottom: 100px;
@@ -165,4 +170,7 @@ p {
     -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+}
+.navBarHeader{
+  width: 80%;
 }

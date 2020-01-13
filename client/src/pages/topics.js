@@ -18,6 +18,8 @@ class Topics extends Component {
     videos: [],
     selectedVideo: null,
     articles: [],
+    // state = { show : true },
+    // handleBlockClick = this.handleBlockClick.bind(this),
   };
 
   videoSearch = _.debounce(term => {
@@ -48,16 +50,19 @@ class Topics extends Component {
   
   handleBlockClick = (searchTitle,id) => {
     console.log("This block clicked: " + searchTitle + " " + id);
+    const { show } = this.state;
     this.searchYoutube(searchTitle);
     this.renderArticles(searchTitle);
+    this.setState( { show: !show } )
 
 
   };
   render() {
     return (
+      
       <div>
       
-      <header className="masthead mb-auto">
+      <header className="navBarHeader masthead mb-auto">
         <div className="inner">
           <nav className="nav nav-masthead justify-content-center">
             <a className="nav-link" href="/">Home</a>
@@ -91,13 +96,13 @@ class Topics extends Component {
         <div className="container">
             <h1 className="section-title h1">VIDEOS</h1>
             <div className="row">
-            {/* <VideoPlayer video={this.state.selectedVideo} /> */}
-            {/* <VideoList
+            <VideoPlayer video={this.state.selectedVideo} />
+            { this.state.show && <VideoList
               onVideoSelect={selectedVideo => {
                 this.setState({ selectedVideo });
               }}
               videos={this.state.videos}
-            /> */}
+            />}
           </div>
         </div>
         </section>

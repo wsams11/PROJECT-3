@@ -1,14 +1,9 @@
 
 import React from 'react';
 import NavBar from "../components/navBar";
-// import axios from "axios";
-import Footer from '../components/footer'
 import { Container, Form, Button, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
 import UserContext from "../userContext.js";
-// import {setUser, user} from "../App.js"
 
-// import "./login.css"
-// import "bootstrap/dist/css/bootstrap.min.css";
 
 const topicsArray = ["Taxes", "Finances", "Renting an Apartment", "Buying a Home", "Saving and Investing", "Buying a Car", "Career Advice", "Investing", "Insurance"];
 
@@ -25,7 +20,6 @@ function Login(props) {
         <Container>
           <NavBar />
           <main role="main" className="inner cover">
-            <h1 className="cover-heading">TRANSITIONS</h1>
             <Row>
 
               <Col xs={12} md={6} lg={5} className="LoginContainer">
@@ -35,7 +29,7 @@ function Login(props) {
                 <Form classNanme="Form" action="/login" method = "post">
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onChange={handleChange} type="email" value={user.email} name="email" type="email" placeholder="Enter email" />
+                    <Form.Control onChange={handleChange} type="email" value={user.email} name="email" placeholder="Enter email" />
                     <Form.Text className="text-muted">
                       We'll never share your email with anyone else.
                 </Form.Text>
@@ -50,7 +44,7 @@ function Login(props) {
                     onClick={handleLoginSubmit}
                     className="submitBtn" type="submit" value = "Log In">
                     Submit
-  `           </Button>
+                    </Button>
                 </Form>
 
               </Col>
@@ -92,7 +86,7 @@ function Login(props) {
 
           </main>
 
-          <Footer />
+         
         </Container>}
     </UserContext.Consumer>
 

@@ -1,6 +1,3 @@
-
-// import Login from "./pages/login";
-
 import React, { useState } from 'react';
 import UserContext from "./userContext.js";
 import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
@@ -8,7 +5,7 @@ import Home from "./pages/home";
 import Topics from "./pages/topics";
 import Login from "./pages/login";
 import axios from "axios";
-// import { Router } from 'express';
+
 
 
 
@@ -70,12 +67,7 @@ function App(props) {
             email: response.data.email,
             topics: response.data.topics
           });
-          // this.setState({
-          //   email: "",
-          //   password: "",
-          //   topics: "",
-          //   redirectTo: ""
-          // })
+         
           history.push("/topics");
         }
       })
@@ -103,13 +95,6 @@ function App(props) {
             email: response.data.email,
             topics: response.data.topics
           });
-          // this.setState({
-          //   email: "",
-          //   password: "",
-          //   topics: "",
-          //   redirectTo: ""
-          // })
-
           history.push("/topics");
         }
       })
@@ -121,7 +106,7 @@ function App(props) {
 
 
   return (
-    // <Router>
+    
 
 
     <UserContext.Provider value={{ user }}>
@@ -129,15 +114,15 @@ function App(props) {
         <Route exact path="/" component={Home} />
         <Route exact path="/topics" component={Topics} />
         <Route exact path="/login" render={() => <Login
-          // setUser={ setUser } 
+          
           handleChange={handleChange}
           handleSignupSubmit={handleSignupSubmit}
           handleLoginSubmit={handleLoginSubmit}
           setTopic={setTopic} />} />
-        {/* <Route component={NoMatch} /> */}
+        
       </Switch>
     </UserContext.Provider>
-          // </Router>
+          
 
   );
 }
