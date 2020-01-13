@@ -66,3 +66,4 @@ Working APP in React and on Heroku
 
 # LAUNCHED APP
 https://hidden-ravine-51532.herokuapp.com/
+https://docs.google.com/presentation/d/1kJu30BuBcu8kf7IMU9IXQPrSS7CEPz6YYgFzIhwTMbw/edit#slide=id.gcb9a0b074_1_103
