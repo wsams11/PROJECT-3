@@ -5,17 +5,22 @@
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^3.0.7",
+    "concurrently": "^5.0.2",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.4",
-    "passport-jwt": "^4.0.0",
     "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",

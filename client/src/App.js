@@ -52,18 +52,20 @@ function App(props) {
   const handleLoginSubmit = e => {
     e.preventDefault();
     console.log("handleSubmit")
+    console.log(user.email);
+    console.log(user.password);
 
     axios.post("v1/user/signin", {
       email: user.email,
-      password: user.password,
-      topics: user.topics
+      password: user.password
+     
     })
       .then(response => {
         console.log("login response: ");
         console.log(response);
         if (response.status === 200) {
           localStorage.setItem("token", response.data.token);
-          this.props.updatedUser({
+         updatedUser({
             loggedIn: true,
             email: response.data.email,
             topics: response.data.topics
@@ -119,7 +121,7 @@ function App(props) {
 
 
   return (
-    <Router>
+    // <Router>
 
 
     <UserContext.Provider value={{ user }}>
@@ -135,7 +137,7 @@ function App(props) {
         {/* <Route component={NoMatch} /> */}
       </Switch>
     </UserContext.Provider>
-          </Router>
+          // </Router>
 
   );
 }

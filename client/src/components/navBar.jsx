@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const NavBar = (props) => {
   return (
     <header class="masthead mb-auto">
