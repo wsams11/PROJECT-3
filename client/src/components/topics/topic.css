@@ -1,4 +1,5 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 #team {
     background-color: black;
     -webkit-background-size: cover;
@@ -134,3 +135,13 @@ p{
     color: rgba(255, 255, 255, 0.5);
 }
 
+.acard-text{
+    width: 250px;
+     height: 250px;
+}
+.acard-block{
+    height: 380px
+}
+.acard-footer{
+  padding: 15px;
+}

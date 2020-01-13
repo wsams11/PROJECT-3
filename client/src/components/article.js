@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from "axios";
-import ArticlesRender from './articleRender';
+import ArticlesRender from './articleRender.jsx';
 
 export default class Article extends React.Component {
 
