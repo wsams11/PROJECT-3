@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Transitions
 
-## Available Scripts
+Are you a individual striving for better but not sure where to get the learning tools necessary? look no further!
 
-In the project directory, you can run:
+## Motivation
 
-### `npm start`
+We created transitions with the thought in mind of giving people the tools necessary to help them transition into adulthood with the knowledge and understanding of topics that sometimes aren't taught well enough in school.
+ 
+## Screenshots
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![HomePage](client/src/images/homepage.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Topics](client/src/images/topics.png)
 
-### `npm test`
+![Login](client/src/images/login.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Video](client/src/images/videos.png)
 
-### `npm run build`
+![Article](client/src/images/articles.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Topic Page](client/src/images/topicgif.gif)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Tech/framework used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<b>Built with</b>
+- [HTML/CSS](https://electron.atom.io)
+- [BOOTSTRAP](https://getbootstrap.com/)
+- [NODE](https://nodejs.org/en/)
+- [EXPRESS](https://expressjs.com/)
+- [PASSPORT](http://www.passportjs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [HEROKU](https://www.heroku.com/)
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Transitions gives the user the ability to create an account and also choose their favorite topic that they would like to learn about. The user will be able to select from 9 different topics and each topic presents videos and articles that will help you understanding of how each of the different topics work! 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## API Reference
 
-## Learn More
+- [YOUTUBE API](https://developers.google.com/youtube)
+- [NEWS API](https://newsapi.org/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Transitions is based on the API calls of YouTube and NEWS heavily to get the information necessary to help the user. The YouTube API pulls the videos that give the user a visual on how to better understand the topic and the NEWS API helps gives the users articles that that can review long after they have left the site!   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Credits
 
-### Code Splitting
+Make sure you give the Transitions team a round of applause! 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Richard – Set up the database, handle the routes and spearheaded the authentication
 
-### Analyzing the Bundle Size
+Jacob & William – Took care of the frontend design and functionality and worked on front end JS to connect the front and back together.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Challenges
 
-### Making a Progressive Web App
+Getting on the same page design and responsbilities
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Learning the Passport authentication and getting it to work
 
-### Advanced Configuration
+Hiding and showing of element on clicks
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Successes
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Working APP in React and on Heroku
