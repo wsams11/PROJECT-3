@@ -12,14 +12,12 @@ import ArticlesRender from '../components/articleRender';
 const YT_API = "AIzaSyBjig4d5vLFZSGZIgL0T2CktcYI5izgPgY";
 
 class Topics extends Component {
-  // Setting this.state.topics to the topics json array
   state = {
     topics,
     videos: [],
     selectedVideo: null,
     articles: [],
-    // state = { show : true },
-    // handleBlockClick = this.handleBlockClick.bind(this),
+   
   };
 
   videoSearch = _.debounce(term => {
@@ -49,7 +47,6 @@ class Topics extends Component {
   
   
   handleBlockClick = (searchTitle,id) => {
-    console.log("This block clicked: " + searchTitle + " " + id);
     const { show } = this.state;
     this.searchYoutube(searchTitle);
     this.renderArticles(searchTitle);
@@ -97,7 +94,7 @@ class Topics extends Component {
             <h1 className="section-title h1">VIDEOS</h1>
             <div className="row">
             <VideoPlayer video={this.state.selectedVideo} />
-            { this.state.show && <VideoList
+            { <VideoList
               onVideoSelect={selectedVideo => {
                 this.setState({ selectedVideo });
               }}
